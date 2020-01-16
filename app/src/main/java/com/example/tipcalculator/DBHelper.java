@@ -7,10 +7,12 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.Nullable;
+
 public class DBHelper extends SQLiteOpenHelper {
     SQLiteDatabase _db;
 
-    public DBHelper(Context context){
+    public DBHelper(@Nullable Context context){
         super(context, "test.db", null, 1);
         this._db = this.getWritableDatabase();
     }
