@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
+    /* ********* ACTIVITY #2 ********* */
+    DatabaseHelper myDB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +47,21 @@ public class MainActivity extends AppCompatActivity {
         lblTest = findViewById(R.id.lblTest);
 
 
+        /* ********* ACTIVITY #1 ********* */
         DBHelper dbHelper = new DBHelper(this);
         dbHelper.insertUsers();
 
         lblTest.setText(String.valueOf(dbHelper.numberOfRows()));
 
         lblTest.setText(dbHelper.getUser(1));
+
+
+
+        /* ********* ACTIVITY #2 ********* */
+        myDB = new DatabaseHelper(this);
+
+
+
 
 
         seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
