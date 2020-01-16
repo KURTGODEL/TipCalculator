@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="txt_amount">Enter Amount</string>
+    <string name="lbl_tip">0%</string>
+    <string name="lbl_tip_str">Tip</string>
+    <string name="lbl_total_str">Total</string>
+</resources>

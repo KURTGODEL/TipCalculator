@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="4">
+
+
+        <EditText
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="20dp"
+            android:background="@android:color/transparent"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:hint="@string/txt_amount"
+            android:inputType="numberSigned|numberDecimal"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/lblAmount"
+            android:layout_width="29dp"
+            android:layout_height="25dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal|fill_vertical"
+            android:layout_margin="20dp"
+            android:background="@android:color/holo_blue_light"
+            android:padding="10dp"
+            android:text="Enter Amount"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lbl_tip"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/lblTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/lbl_tip_str"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/txtTip"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:ems="10"
+            android:hint="$0.00"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/lblTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lbl_total_str"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:editable="false"
+            android:ems="10"
+            android:hint="$0.00"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:paddingLeft="10dp" />
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
