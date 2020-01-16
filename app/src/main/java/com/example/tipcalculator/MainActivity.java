@@ -2,6 +2,7 @@ package com.example.tipcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtTotal;
     private TextView lblAmount;
     private Double billAmount;
+    private TextView lblTest;
 
     private static final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
@@ -39,7 +41,15 @@ public class MainActivity extends AppCompatActivity {
         txtTotal = findViewById(R.id.txtTotal);
         lblSeekBar = findViewById(R.id.lblSeekBar);
         lblAmount = findViewById(R.id.lblAmount);
+        lblTest = findViewById(R.id.lblTest);
 
+
+        DBHelper dbHelper = new DBHelper(this);
+        dbHelper.insertUsers();
+
+        lblTest.setText(String.valueOf(dbHelper.numberOfRows()));
+
+        lblTest.setText(dbHelper.getUser(1));
 
 
         seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
