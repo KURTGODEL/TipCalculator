@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     /* ********* ACTIVITY #3 ********* */
     private EditText editTextName, editTextSurname, editTextMarks;
-    private Button buttonAddData;
-    private Button buttonViewAll;
+    private Button buttonAddData, buttonViewAll, buttonListView;
 
     private static final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
@@ -59,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         editTextMarks = findViewById(R.id.editTextMarks);
         buttonAddData = findViewById(R.id.button_add);
         buttonViewAll = findViewById(R.id.button_viewall);
+        buttonListView = findViewById(R.id.button_listview);
 
 
         /* ********* ACTIVITY #1 ********* */
@@ -77,17 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
         /* ********* ACTIVITY #3 ********* */
         AddData();
-        //ViewAll();
+        ViewAll();
+
 
 
         /* ********* ACTIVITY #4 ********* */
-        buttonViewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent I = new Intent(MainActivity.this, DBListView.class);
-                startActivity(I);
-            }
-        });
+        ListView();
 
 
 
@@ -152,6 +147,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void ListView(){
+        buttonListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I = new Intent(MainActivity.this, DBListView.class);
+                startActivity(I);
+            }
+        });
+    }
+
 
     /* ********* ACTIVITY #3 ********* */
     public void ViewAll(){
