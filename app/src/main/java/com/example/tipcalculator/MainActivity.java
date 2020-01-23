@@ -3,6 +3,7 @@ package com.example.tipcalculator;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
@@ -72,8 +73,21 @@ public class MainActivity extends AppCompatActivity {
 
         /* ********* ACTIVITY #2 ********* */
         myDB = new DatabaseHelper(this);
+
+
+        /* ********* ACTIVITY #3 ********* */
         AddData();
-        ViewAll();
+        //ViewAll();
+
+
+        /* ********* ACTIVITY #4 ********* */
+        buttonViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I = new Intent(MainActivity.this, DBListView.class);
+                startActivity(I);
+            }
+        });
 
 
 
